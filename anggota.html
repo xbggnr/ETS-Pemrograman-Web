@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Anggota - My Perpustakaan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top py-3 bg-white">
+            <div class="container d-flex gap-5">
+                <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+                    <div class="brand-icon">
+                        <i class="bi bi-book"></i>
+                    </div>
+                    <h5 class="fw-bold mb-0 text-primary">My Perpustakaan</h5>
+                </a>
+
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navMenu">
+                    <ul class="navbar-nav mx-auto gap-2 gap-lg-3 align-items-center my-3 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="index.html#tentang">Tentang Perpustakaan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="index.html#layanan">Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center active" href="anggota.html">Daftar Anggota</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="pendaftaran.html">Pendaftaran Anggota</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex justify-content-center justify-content-lg-end">
+                        <a href="login.html" id="navLoginBtn" class="btn btn-login-nav px-4">Login Petugas</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container py-5 flex-grow-1">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+            <div>
+                <h2 class="fw-bold mb-1">Daftar Anggota</h2>
+                <p class="text-muted mb-0">Kelola data anggota perpustakaan.</p>
+            </div>
+            <a href="pendaftaran.html" class="btn btn-primary-custom">+ Tambah Anggota</a>
+        </div>
+
+        <div class="card border-0 shadow-sm p-4 rounded-4">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <input type="text" id="searchInput" class="form-control bg-light border-0" placeholder="Cari nama atau NIM/NIP">
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover border-top">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Lengkap</th>
+                            <th>NIM/NIP</th>
+                            <th>Program Studi</th>
+                            <th>Jenis</th>
+                            <th>Email</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data diisi oleh JS -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3 text-muted small">
+                <span id="dataCount">Menampilkan data</span>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-sm btn-light border px-3">&lt;</button>
+                    <button class="btn btn-sm btn-primary px-3 text-white">1</button>
+                    <button class="btn btn-sm btn-light border px-3">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background-color: #0b1320;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-white mb-3">My Perpustakaan</h5>
+                    <p class="text-white-50 small">Web aplikasi perpustakaan masa kini.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-white mb-3">Kontak</h6>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-geo-alt me-2"></i>Jl. Raya Ngawi Barat, Ngawi, Jawa Tengah</p>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-envelope me-2"></i>myperpustakaan@gmail.com</p>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-telephone me-2"></i>082188792019</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-white mb-3">Jam Layanan</h6>
+                    <p class="text-white-50 small mb-1">Senin - Jumat: 07.00 - 20.00</p>
+                    <p class="text-white-50 small mb-1">Sabtu - Minggu: 09.00 - 14.00</p>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary opacity-25">
+            <div class="text-center text-white-50 small">
+                &copy; 2026 My Perpustakaan.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

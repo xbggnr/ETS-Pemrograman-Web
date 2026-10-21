@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran - My Perpustakaan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top py-3 bg-white">
+            <div class="container d-flex gap-5">
+                <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+                    <div class="brand-icon">
+                        <i class="bi bi-book"></i>
+                    </div>
+                    <h5 class="fw-bold mb-0 text-primary">My Perpustakaan</h5>
+                </a>
+
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navMenu">
+                    <ul class="navbar-nav mx-auto gap-2 gap-lg-3 align-items-center my-3 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="index.html#tentang">Tentang Perpustakaan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="index.html#layanan">Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="anggota.html">Daftar Anggota</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center active" href="pendaftaran.html">Pendaftaran Anggota</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex justify-content-center justify-content-lg-end">
+                        <a href="login.html" id="navLoginBtn" class="btn btn-login-nav px-4">Login Petugas</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container py-5 flex-grow-1">
+        <div class="row align-items-start g-5">
+            <div class="col-lg-5">
+                <p class="subtitle-hero text-primary mb-1">PENDAFTARAN ANGGOTA</p>
+                <h2 class="fw-bold mb-3">Bergabung menjadi anggota perpustakaan</h2>
+                <p class="text-muted mb-4">Isi formulir berikut. Data Anda langsung masuk ke daftar anggota tanpa formulir kertas dan tanpa antre.</p>
+                
+                <h6 class="fw-bold mt-5 mb-3">Sebelum mengisi</h6>
+                <ol class="text-muted ps-3">
+                    <li class="mb-2">Siapkan NIM atau NIP Anda.</li>
+                    <li class="mb-2">Gunakan email yang aktif.</li>
+                    <li class="mb-2">Satu NIM/NIP hanya dapat didaftarkan sekali.</li>
+                </ol>
+            </div>
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm p-4 p-md-5 rounded-4 bg-white">
+                    <h5 class="fw-bold mb-1">Formulir Pendaftaran Anggota</h5>
+                    <p class="text-muted small mb-4">Semua kolom wajib diisi.</p>
+
+                    <form id="formPendaftaran">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small">Nama lengkap</label>
+                                <input type="text" id="regNama" class="form-control bg-light border-0 py-2" placeholder="Masukkan nama lengkap" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small">NIM/NIP</label>
+                                <input type="text" id="regNim" class="form-control bg-light border-0 py-2" placeholder="Masukkan NIM atau NIP" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold small">Program studi</label>
+                                <input type="text" id="regProdi" class="form-control bg-light border-0 py-2" placeholder="Masukkan program studi" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold small">Alamat</label>
+                                <input type="text" id="regAlamat" class="form-control bg-light border-0 py-2" placeholder="Masukkan alamat lengkap" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small">Nomor telepon</label>
+                                <input type="tel" id="regTelepon" class="form-control bg-light border-0 py-2" placeholder="Contoh: 08XXXXXXXXXX" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold small">Email</label>
+                                <input type="email" id="regEmail" class="form-control bg-light border-0 py-2" placeholder="nama@email.com" required>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <label class="form-label fw-semibold small">Jenis keanggotaan</label>
+                                <select id="regJenis" class="form-select bg-light border-0 py-2" required>
+                                    <option value="" hidden>Pilih jenis keanggotaan</option>
+                                    <option value="Mahasiswa">Mahasiswa</option>
+                                    <option value="Dosen">Dosen</option>
+                                    <option value="Tenaga Kependidikan">Tenaga Kependidikan</option>
+                                </select>
+                            </div>
+                            <div class="col-12 d-flex gap-3">
+                                <button type="submit" class="btn btn-primary-custom w-100">Daftar Sekarang</button>
+                                <button type="reset" id="btnReset" class="btn btn-outline-custom w-50">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="notifBox" class="alert d-none mt-3" role="alert"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background-color: #0b1320;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-white mb-3">My Perpustakaan</h5>
+                    <p class="text-white-50 small">Web aplikasi perpustakaan masa kini.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-white mb-3">Kontak</h6>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-geo-alt me-2"></i>Jl. Raya Ngawi Barat, Ngawi, Jawa Tengah</p>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-envelope me-2"></i>myperpustakaan@gmail.com</p>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-telephone me-2"></i>082188792019</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-white mb-3">Jam Layanan</h6>
+                    <p class="text-white-50 small mb-1">Senin - Jumat: 07.00 - 20.00</p>
+                    <p class="text-white-50 small mb-1">Sabtu - Minggu: 09.00 - 14.00</p>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary opacity-25">
+            <div class="text-center text-white-50 small">
+                &copy; 2026 My Perpustakaan.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

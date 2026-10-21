@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Perpustakaan - Beranda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top py-3 bg-white">
+            <div class="container d-flex gap-5">
+                <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+                    <div class="brand-icon">
+                        <i class="bi bi-book"></i>
+                    </div>
+                    <h5 class="fw-bold mb-0 text-primary">My Perpustakaan</h5>
+                </a>
+
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navMenu">
+                    <ul class="navbar-nav mx-auto gap-2 gap-lg-3 align-items-center my-3 my-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center active" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="index.html#tentang">Tentang Perpustakaan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="index.html#layanan">Layanan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="anggota.html">Daftar Anggota</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-center d-flex align-items-center justify-content-center" href="pendaftaran.html">Pendaftaran Anggota</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex justify-content-center justify-content-lg-end">
+                        <a href="login.html" id="navLoginBtn" class="btn btn-login-nav px-4">Login Petugas</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="container">
+        <div class="hero-section row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <p class="subtitle-hero">GERBANG ILMU, JENDELA MASA DEPAN</p>
+                <h1 class="fw-bold display-5 mb-3">Selamat Datang di<br><span class="text-primary">My Perpustakaan</span></h1>
+                <p class="text-muted mb-4">Daftar jadi anggota secara online, tanpa antre dan tanpa formulir kertas. Akses koleksi buku, jurnal, e-book, dan sumber referensi untuk belajar dan penelitian.</p>
+                <a href="pendaftaran.html" class="btn btn-primary-custom me-2">Daftar Anggota</a>
+                <a href="#layanan" class="btn btn-outline-custom">Lihat Layanan</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ilustrasi Buku" class="img-fluid rounded-4 shadow">
+            </div>
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="container py-5 mt-4">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <h5 class="fw-bold"><i class="bi bi-book text-primary me-2"></i>Koleksi Lengkap</h5>
+                <p class="text-muted small">Lebih dari 50.000 koleksi buku dan e-book</p>
+            </div>
+            <div class="col-md-3">
+                <h5 class="fw-bold"><i class="bi bi-people text-primary me-2"></i>Akses untuk Semua</h5>
+                <p class="text-muted small">Mahasiswa, dosen, dan tenaga kependidikan</p>
+            </div>
+            <div class="col-md-3">
+                <h5 class="fw-bold"><i class="bi bi-laptop text-primary me-2"></i>Layanan Digital</h5>
+                <p class="text-muted small">Akses katalog online dan e-resources</p>
+            </div>
+            <div class="col-md-3">
+                <h5 class="fw-bold"><i class="bi bi-cup-hot text-primary me-2"></i>Ruang Nyaman</h5>
+                <p class="text-muted small">Fasilitas belajar dan diskusi yang nyaman</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tentang Perpustakaan -->
+    <div id="tentang" class="container py-5 border-top">
+        <p class="subtitle-hero text-primary mb-1">TENTANG PERPUSTAKAAN</p>
+        <h2 class="fw-bold mb-4">Keunggulan dan fasilitas perpustakaan</h2>
+        <div class="row">
+            <div class="col-lg-5 mb-4">
+                <p class="text-muted">Pendaftaran digital menggantikan formulir kertas, sehingga petugas dan anggota sama-sama lebih cepat.</p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Tanpa antre:</strong> Daftar kapan saja dari perangkat Anda.</li>
+                    <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Data lebih akurat:</strong> Validasi otomatis mencegah salah catat.</li>
+                    <li class="mb-3"><i class="bi bi-check-circle-fill text-primary me-2"></i> <strong>Mudah dicari:</strong> Petugas menemukan anggota dari nama atau NIM/NIP.</li>
+                </ul>
+            </div>
+            <div class="col-lg-7">
+                <div class="row g-4">
+                    <div class="col-sm-6">
+                        <div class="p-4 bg-white border rounded-4 h-100 shadow-sm">
+                            <h6 class="fw-bold">Ruang baca nyaman</h6>
+                            <p class="text-muted small mb-0">Suasana tenang dengan pencahayaan yang baik.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-4 bg-white border rounded-4 h-100 shadow-sm">
+                            <h6 class="fw-bold">Wi-Fi dan komputer</h6>
+                            <p class="text-muted small mb-0">Mendukung riset, tugas, dan akses jurnal online.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-4 bg-white border rounded-4 h-100 shadow-sm">
+                            <h6 class="fw-bold">Ruang diskusi</h6>
+                            <p class="text-muted small mb-0">Tempat belajar kelompok dan kerja tim.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-4 bg-white border rounded-4 h-100 shadow-sm">
+                            <h6 class="fw-bold">Katalog online</h6>
+                            <p class="text-muted small mb-0">Cari koleksi dari mana saja.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layanan -->
+    <div id="layanan" class="container py-5 border-top">
+        <p class="subtitle-hero text-primary mb-1">LAYANAN</p>
+        <h2 class="fw-bold mb-3">Layanan perpustakaan</h2>
+        <p class="text-muted mb-5">Semua yang dibutuhkan sivitas akademika untuk belajar, meneliti, dan berdiskusi.</p>
+        
+        <div class="row g-4 mb-5">
+            <div class="col-md-3">
+                <div class="card border-0 bg-blue-light h-100">
+                    <div class="card-body">
+                        <h6 class="fw-bold">Pinjam Buku dan E-book</h6>
+                        <p class="text-muted small">Buku teks, referensi, dan e-book dari berbagai program studi.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 bg-blue-light h-100">
+                    <div class="card-body">
+                        <h6 class="fw-bold">Akses Jurnal Online</h6>
+                        <p class="text-muted small">Jurnal ilmiah yang bisa dibuka dari mana saja.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 bg-blue-light h-100">
+                    <div class="card-body">
+                        <h6 class="fw-bold">Ruang Belajar</h6>
+                        <p class="text-muted small">Ruang diskusi dan belajar kelompok yang nyaman.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card border-0 bg-blue-light h-100">
+                    <div class="card-body">
+                        <h6 class="fw-bold">Kegiatan Literasi</h6>
+                        <p class="text-muted small">Program literasi untuk meningkatkan minat baca sivitas akademika.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="row text-center mb-5 rounded-4 p-4 bg-primary text-white shadow-sm">
+            <div class="col-6 col-md-3 mb-3 mb-md-0">
+                <div class="stats-number text-white">50.000+</div>
+                <div class="text-white-50">Koleksi buku dan e-book</div>
+            </div>
+            <div class="col-6 col-md-3 mb-3 mb-md-0">
+                <div class="stats-number text-white">10.000+</div>
+                <div class="text-white-50">Anggota aktif</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stats-number text-white">100+</div>
+                <div class="text-white-50">Jurnal ilmiah</div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="stats-number text-white">8</div>
+                <div class="text-white-50">Ruang baca dan diskusi</div>
+            </div>
+        </div>
+
+        <div class="text-center py-5">
+            <h3 class="fw-bold">Siap menjadi anggota perpustakaan?</h3>
+            <p class="text-muted mb-4">Isi formulir online. Mahasiswa, dosen, dan tenaga kependidikan dapat mendaftar.</p>
+            <a href="pendaftaran.html" class="btn btn-primary-custom btn-lg">Daftar Sekarang</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-5 text-white" style="background-color: #0b1320;">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-white mb-3">My Perpustakaan</h5>
+                    <p class="text-white-50 small">Web aplikasi perpustakaan masa kini.</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-white mb-3">Kontak</h6>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-geo-alt me-2"></i>Jl. Raya Ngawi Barat, Ngawi, Jawa Tengah</p>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-envelope me-2"></i>myperpustakaan@gmail.com</p>
+                    <p class="text-white-50 small mb-1"><i class="bi bi-telephone me-2"></i>082188792019</p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="fw-bold text-white mb-3">Jam Layanan</h6>
+                    <p class="text-white-50 small mb-1">Senin - Jumat: 07.00 - 20.00</p>
+                    <p class="text-white-50 small mb-1">Sabtu - Minggu: 09.00 - 14.00</p>
+                </div>
+            </div>
+            <hr class="my-4 border-secondary opacity-25">
+            <div class="text-center text-white-50 small">
+                &copy; 2026 My Perpustakaan.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
