@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (data.some(a => a.nim === nim)) {
                 notifBox.className = "alert alert-danger mt-3";
-                notifBox.innerHTML = "Contoh galat: NIM/NIP sudah terdaftar.";
+                notifBox.innerHTML = "NIM/NIP sudah terdaftar.";
                 notifBox.classList.remove('d-none');
                 return;
             }
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             saveData(data);
 
             notifBox.className = "alert alert-success mt-3";
-            notifBox.innerHTML = "Contoh notifikasi sukses: Pendaftaran berhasil, data masuk ke daftar anggota.";
+            notifBox.innerHTML = "Pendaftaran berhasil, data masuk ke daftar anggota.";
             notifBox.classList.remove('d-none');
             formDaftar.reset();
         });
@@ -99,11 +99,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (isValid) {
                 localStorage.setItem('isLogin', 'true')
                 alertBox.className = "alert alert-success text-center mt-3 fw-semibold";
-                alertBox.innerHTML = "Contoh berhasil: Autentifikasi Berhasil";
+                alertBox.innerHTML = "Autentifikasi Berhasil";
                 setTimeout(() => window.location.href = "anggota.html", 1500);
             } else {
                 alertBox.className = "alert alert-danger text-center mt-3 fw-semibold";
-                alertBox.innerHTML = "Contoh gagal: Autentifikasi Gagal";
+                alertBox.innerHTML = "Autentifikasi Gagal";
             }
         });
     }
@@ -144,6 +144,6 @@ function hapusData(nim) {
         data = data.filter(a => a.nim !== nim);
         saveData(data);
         renderTable(document.getElementById('searchInput').value);
-        alert("Contoh notifikasi: Data anggota berhasil diperbarui.");
+        alert("Data anggota berhasil diperbarui.");
     }
 }
